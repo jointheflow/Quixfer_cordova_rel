@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html ng-app="buxferModule" ng-controller="GlobalController">
+<head>
+    <title>{{applicationName}} ({{applicationVersion}})</title>
+    <script type="text/javascript" src="lib/angular/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular/angular-route.min.js"></script>
+	<script type="text/javascript" src="lib/angular/ui-bootstrap-tpls-0.11.2.js"></script>
+    <script type="text/javascript" src="lib/x2js-v1.1.5/xml2json.min.js"></script>
+	<script type="text/javascript" src="lib/angular/lodash.js"></script>
+    <script type="text/javascript" src="lib/buxfer_persistence_client_1_0_0.js"></script>
+	<script type="text/javascript" src="lib/ng-tags-input.min.js"></script>
+    <script type="text/javascript" src="lib/aes.js"></script>
+
+    
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/service/buxferAPI-service.js"></script>
+    <script type="text/javascript" src="js/service/buxferModel-service.js"></script>
+    <script type="text/javascript" src="js/service/buxferUIAlert-service.js"></script>
+    <script type="text/javascript" src="js/controller/global-controller.js"></script>
+	<script type="text/javascript" src="js/controller/add-controller.js"></script>
+    <script type="text/javascript" src="js/controller/sync-controller.js"></script>
+    <script type="text/javascript" src="js/controller/settings-controller.js"></script>
+    <script type="text/javascript" src="js/controller/add-user-controller.js"></script>
+    <script type="text/javascript" src="js/controller/show-msg-controller.js"></script>
+    <script type="text/javascript" src="js/model/model.js"></script>
+	<script type="text/javascript" src="js/service/http-interceptor.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=no">
+    <link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="css/ng-tags-input.min.css"rel="stylesheet" media="screen">
+    <link href="css/ng-tags-input.bootstrap.min.css" rel="stylesheet" media="screen">    
+    
+        
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+	<link href="css/bootstrap-theme.css" rel="stylesheet" media="screen">
+	<!--script src="lib/jquery/jquery.js"></script-->
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="js/bootstrap.min.js"></script-->
+    <script type="text/javascript" src="lib/angular/ng-cordova.min.js"></script>
+    <!--script src="cordova.js"></script-->
+	
+ 
+	
+
+</head>
+<body>
+	
+     
+
+  <!-- Start View section --> 
+  <div class="container-fluid">
+  	<div data-ng-view></div>
+  </div>
+  <!-- End View section -->
+	
+				
+
+	
+<footer>
+    <div class="navbar navbar-inverse navbar-fixed-bottom">
+        <div class="container">
+            
+                <ul class="nav navbar-nav">
+                    <li ng-class="getClass('/add')"><a href="#add" ><i class="fa fa-pencil-square-o"></i> Add</a></li>
+					<li ng-class="getClass('/synch')"><a href="#synch"><i class="fa fa-paper-plane-o"></i> Synch</a></li>
+                    <li ng-class="getClass('/settings')"><a href="#settings"><i class="fa fa-wrench"></i> Set</a></li>
+                    <li ng-class="getClass('/info')"><a href="#info"><i class="fa fa-info"></i> Info</a></li>
+					<!--li><a href="#credits"><i class="fa fa-star-o"></i> Credits</a></li-->
+                   
+                </ul>
+			
+                     	
+
+        </div>
+    </div>
+</footer>
+   
+</body>
+	
+<!--Start modal alert manager -->
+ <script type="text/ng-template" id="showMessageModal.html">
+        <div class="modal-header"><span class="label label-info">Message from LocalBuxfer</span></div>
+        <div class="modal-body">
+			<!-- start alert section -->
+    		<div class="container-fluid">
+         		<alert ng-repeat="alert in alerts" type="{{alert.type}}" 	close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+    <!-- end alert section -->  
+		</div>
+ </script>
+<!--end modal alert manager -->
+</html>
