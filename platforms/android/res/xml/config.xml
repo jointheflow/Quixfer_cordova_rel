@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.gr.quixfer" version="1.0.0-beta" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <name>Quixfer</name>
+    <description>
+        Hybrid App for smart locally money management of Buxfer expenses and incomes 
+    </description>
+    <author email="gianluca.ragnoni@gmail.com" href="https://it.linkedin.com/in/gianlucaragnoni">
+        Gianluca Ragnoni
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
+    <splash density="land-hdpi" src="www/img/quixfer.png" />
+</widget>
