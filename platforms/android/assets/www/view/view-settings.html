@@ -1,0 +1,70 @@
+<div class="container-fluid">
+	<header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- brand section-->
+                <div ng-include="'view/view-navbarBrand.html'"></div>    
+                <!-- end brand section -->
+                
+                <!-- tool button section -->        
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#settings" ng-click="openAddUser()" tooltip-placement="bottom" tooltip="Add User"><i class="fa fa-user-plus fa-2x"></i></a></li>
+					<li><a href="#settings" ng-click="saveConfiguration()" tooltip-placement="bottom" tooltip="Save Configuration"><i class="fa fa-floppy-o fa-2x"></i></a></li>
+					
+                </ul>
+                <!-- end tool section -->
+            </div>
+        </div>
+    </header>
+    
+	<div> 
+		<p class="bg-primary"> Setting view 
+			<!-- user and loader section-->
+                <div ng-include="'view/view-userHeader.html'"></div>    
+            <!-- end user and loader section -->
+        </p>
+    </div>
+
+    
+    <form name="setUserfrm" novalidate>
+			
+		<div data-ng-repeat="user in users" class="panel panel-default">
+  			<div class="panel-heading" ><input type="checkbox" ng-click="setCurrent(user)" ng-checked="isUserActive(user.username)"> - </input><i class="fa fa-user"></i>  <i>{{user.username}}</i>                </div>
+  			<div class="panel-body">
+    			
+                <table class="table" style="border: none">
+                    <tr>
+                        <td style="border: none"><table class="table" cellspacing="0" cellpadding="0" style="border: none">
+                                <tr style="border: none">
+                                    <!--td>default description</td-->
+                                    <td style="border: none">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-pencil"></i></div>
+                                            <input type="text" tooltip-placement="bottom" tooltip="default transaction description" name="descdefault" id="descdefault" ng-model="user.defaultDescription" placeholder="default transaction description" class="form-control" />
+                                        </div>
+                                    </td>	
+                                </tr>
+                                <tr>
+                                <!--td>password</td-->
+                                    <td style="border: none">
+                                        <div class="input-group">
+                                            <div class="input-group-addon"><i class="fa fa-user-secret"></i></div>
+                                            <input type="password" tooltip-placement="bottom" tooltip="user's password" name="password" id="password" ng-model="user.clearPassword" placeholder="password" class="form-control" />
+                                        </div>
+                                    </td>	
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: middle; border: none"><button  type="button" class="btn btn-default btn-sm" ng-click="removeUser(user.username)" tooltip-placement="bottom" tooltip="Remove User"><i class="fa fa-user-times fa-2x"></i></button></td>
+                    </tr>
+                </table>
+				
+  			</div>
+		</div>
+		
+		
+		<!--button class="btn btn-default btn-xs" ng-click="openAddUser()"><i class="fa fa-user-plus"></i> Add User</button-->
+	</form>	
+	
+			
+</div> 

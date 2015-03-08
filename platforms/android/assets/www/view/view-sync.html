@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <header>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <!-- brand section-->
+                <div ng-include="'view/view-navbarBrand.html'"></div>    
+                <!-- end brand section -->
+                
+                <!-- start tool button -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#synch" ng-click="synchronize()" tooltip-placement="bottom" tooltip="Synchronize Transactions"><i class="fa fa-cloud-upload fa-2x"></i></a></li>
+                </ul>
+                <!-- end tool button -->
+            </div>
+        </div>
+    </header>	
+	
+	<div>
+		<p class="bg-primary"> Sync view  
+			<!-- user and loader section-->
+                <div ng-include="'view/view-userHeader.html'"></div>    
+            <!-- end user and loader section -->
+			
+        </p>
+    </div>
+	
+	 <form name="SynchTransactionForm" novalidate>
+				
+		  <div class="panel panel-default">
+		  	 <table class="table table-hover">
+      			<tbody>
+				 	<!-- get all transaction ordered by transaction date from the most recent"-->
+					<tr data-ng-repeat="transaction in currentUser.transactionList | orderBy : '-date'">
+						<td><h5 class="list-group-item-heading"><strong>{{transaction.date}} - {{transaction.type}}</strong></h5>
+                        <p class="list-group-item-text">Amount: {{transaction.amount}},00</p>  <p class="list-group-item-text">Description: {{transaction.description}}</p><p class="list-group-item-text">Tags: {{transaction.tags}}</p></td>
+						
+						<td style="vertical-align: middle"> <button type="button" class="btn btn-default btn-sm" ng-click="removeTransaction(transaction.id)" tooltip-placement="bottom" tooltip="Remove Transaction"><i class="fa fa-trash fa-2x"></i></button></td>
+						</tr>
+				</tbody>
+			</table>
+          </div>
+	</form>
+	
+	
+	
+		
+    
+    
+ 
+</div>

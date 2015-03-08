@@ -1,0 +1,39 @@
+Release note v4
+
+TODO:
+- move global behaviour and controll to global controller and index view (es. loader, alerting....)
+implement http://weblogs.asp.net/dwahlin/building-an-angularjs-modal-service
+
+- tags.json does not return all tags
+- transaction does not add income
+V error management for connection problem e.g. timeout or other intercept by the browser
+V Synch view: on swipe show a message or button elimina (use ng Show or other)
+V Setting view: create a panel where specify user preference as description default,
+V password saved encryped
+- add view: accept only number on amount field
+
+
+
+
+dependencies:
+- bootstrap 3 (only css)
+- ui-bootstrap
+- http://angular-translate.github.io/#
+- http://mbenford.github.io/ngTagsInput/gettingstarted
+- http://fortawesome.github.io/Font-Awesome/examples/
+- https://code.google.com/p/crypto-js/
+
+windows: start chrome using "chrome.exe --disable-web-security -–allow-file-access-from-files"
+mac: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security -–allow-file-access-from-files
+
+user/pwd: BuxferQuickClientMobile/BuxferQuickClientMobile
+user/pwd: _smartbuxfer_/_smartbuxfer_
+
+
+INFO:
+-CONDIVISIONE DELLO SCOPE FRA CONTROLLER-
+Per rendere accessibile il medesimo scope a controller differenti è necessaria una relazione padre-figlio.
+Così facendo posso definire un controller globale a livello di applicazione nel DOM e inserire come controller
+figli tutti quelli che mi servono specifici per le singole funzioni. In questo modo dai figli avrò accesso alle prorietà definite nello scope padre.
+
+
