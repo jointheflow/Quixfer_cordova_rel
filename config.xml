@@ -1,12 +1,14 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.gr.quixfer" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.gr.quixfer" version="1.0.0-beta" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Quixfer</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Hybrid App for smart locally money management of Buxfer expenses and incomes 
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="gianluca.ragnoni@gmail.com" href="https://it.linkedin.com/in/gianlucaragnoni">
+        Gianluca Ragnoni
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="www/img/quixfer.png" width="57" height="57" density="mdpi" />
+    <splash src="www/img/quixfer.png" density="land-hdpi"/>
 </widget>
