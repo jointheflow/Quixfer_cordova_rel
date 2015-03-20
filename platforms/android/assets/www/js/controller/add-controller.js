@@ -63,10 +63,24 @@ buxferModule.controller('AddController',
       			day="0" + day;
 			}
     		$scope.transdate=year + "-" + month + "-" + day
-            //set focus to description
-            $timeout(function () {
-				document.getElementById("amount").focus();
+            //execute click to amount to open keyword automatically.
+            //in the event listener click will set focus to the amount
+           /* $timeout(function () {
+                
+				//document.getElementById("amount").focus();
+                //cordova.plugins.Keyboard.show();
+                
 				}, 0, false);
+            */
+            
+            document.addEventListener("deviceready", function () {
+                    //document.getElementById("amount").focus();
+                    //cordova.plugins.Keyboard.show();
+                    cordova.plugins.Focus.focus(document.getElementById("amount"));
+                    /*$timeout(function () {
+				        document.getElementById("amount").focus();    
+				    }, 0, false);*/
+                }, false);
 		};
 		
 		//initialize view-add view
@@ -139,6 +153,8 @@ buxferModule.controller('AddController',
              
 			
         };
+    
+       
         
 });
 

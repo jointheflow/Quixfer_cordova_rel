@@ -1,6 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.gr.quixfer" version="1.0.0-beta" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="loglevel" value="DEBUG" />
+    <feature name="Keyboard">
+        <param name="android-package" value="com.ionic.keyboard.IonicKeyboard" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Focus">
+        <param name="android-package" value="fr._46cl.focus.Focus" />
+        <param name="onload" value="true" />
+    </feature>
+    <icon density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
+    <splash density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
     <name>Quixfer</name>
     <description>
         Hybrid App for smart locally money management of Buxfer expenses and incomes 
@@ -10,6 +20,6 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
-    <splash density="land-hdpi" src="www/img/quixfer.png" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="1000" />
 </widget>
