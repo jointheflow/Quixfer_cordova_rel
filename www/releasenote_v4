@@ -23,6 +23,22 @@ dependencies:
 - http://fortawesome.github.io/Font-Awesome/examples/
 - https://code.google.com/p/crypto-js/
 
+
+Cordova dependencies:
+- https://github.com/driftyco/ionic-plugins-keyboard
+- https://github.com/46cl/cordova-android-focus-plugin/
+The first manage a ionic keyword, the second make the softkeyboard compliant with the focused input text. (eg. number input text will show only softkeyboard with number)
+
+Install the follwoing plugin:
+- cordova plugin add com.ionic.keyboard
+- cordova plugin add https://github.com/46cl/cordova-android-focus-plugin
+Example of use softkeyboard plugin:
+ Set the focus to the "amount" field and show numeric softkeyboard
+ document.addEventListener("deviceready", function () {
+    cordova.plugins.Focus.focus(document.getElementById("amount"));
+ }, false);
+
+
 windows: start chrome using "chrome.exe --disable-web-security -–allow-file-access-from-files"
 mac: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security -–allow-file-access-from-files
 
@@ -37,3 +53,6 @@ Così facendo posso definire un controller globale a livello di applicazione nel
 figli tutti quelli che mi servono specifici per le singole funzioni. In questo modo dai figli avrò accesso alle prorietà definite nello scope padre.
 
 
+BUILD:
+- cambiare la release su \www\js\app.js e config.xml
+- 

@@ -4,7 +4,13 @@
 	<form name="addUserfrm" novalidate>            
 		<div class="table-responsive">
 			<table class="table">
-			<tr>
+			
+            <tr>
+				<!--td>User</td--><td>Insert a registered Buxfer username and password!</td>
+
+
+			</tr>
+            <tr>
 				<!--td>User</td--><td><input type="text" placeholder="username" name="username" ng-model="username" required/>
 				<!--validation user-->
 				<div ng-show="addUserfrm.username.$invalid" class="text-warning"> Insert a user! </div></td>
@@ -16,7 +22,8 @@
 				<!--validation password-->
 				<div ng-show="addUserfrm.password.$invalid" class="text-warning"> Insert a password! </div></td>	
 			</tr>
-			<tr><!--td></td--><td align="right"><button type="button" class="btn btn-default btn-xs" ng-click="addUser()" ng-disabled="addUserfrm.$invalid"><span class="glyphicon glyphicon-ok"></span>Confirm</button><button type="button" class="btn btn-default btn-xs" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span>Cancel</button></td></tr>
+			<tr><!--td></td--><td align="left"><button type="button" class="btn btn-default btn-xs" ng-click="addUser()" ng-disabled="addUserfrm.$invalid"><span class="glyphicon glyphicon-ok"></span>Login</button> <button type="button" class="btn btn-default btn-xs" ng-click="cancel()"><span class="glyphicon glyphicon-remove"></span>Cancel</button></td></tr>
+            <tr><!--td></td--><td><a href="http://www.buxfer.com">New here? Create an account on Buxfer!</a></td></tr>
 
 			</table>
 			<div class="cancel">
