@@ -1,7 +1,7 @@
 Release note v4
 
-TODO:
-- move global behaviour and controll to global controller and index view (es. loader, alerting....)
+*****TODO:
+V move global behaviour and controll to global controller and index view (es. loader, alerting....)
 implement http://weblogs.asp.net/dwahlin/building-an-angularjs-modal-service
 
 - tags.json does not return all tags
@@ -10,26 +10,24 @@ V error management for connection problem e.g. timeout or other intercept by the
 V Synch view: on swipe show a message or button elimina (use ng Show or other)
 V Setting view: create a panel where specify user preference as description default,
 V password saved encryped
-- add view: accept only number on amount field
+V add view: accept only number on amount field
 
 
 
 
-dependencies:
+******dependencies:
 - bootstrap 3 (only css)
 - ui-bootstrap
 - http://angular-translate.github.io/#
 - http://mbenford.github.io/ngTagsInput/gettingstarted
 - http://fortawesome.github.io/Font-Awesome/examples/
 - https://code.google.com/p/crypto-js/
-
-
 Cordova dependencies:
 - https://github.com/driftyco/ionic-plugins-keyboard
 - https://github.com/46cl/cordova-android-focus-plugin/
 The first manage a ionic keyword, the second make the softkeyboard compliant with the focused input text. (eg. number input text will show only softkeyboard with number)
 
-Install the follwoing plugin:
+****Install the follwoing plugin:
 - cordova plugin add com.ionic.keyboard
 - cordova plugin add https://github.com/46cl/cordova-android-focus-plugin
 Example of use softkeyboard plugin:
@@ -39,20 +37,32 @@ Example of use softkeyboard plugin:
  }, false);
 
 
-windows: start chrome using "chrome.exe --disable-web-security -–allow-file-access-from-files"
+
+
+****windows: start chrome using "chrome.exe --disable-web-security -–allow-file-access-from-files"
 mac: /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security -–allow-file-access-from-files
 
 user/pwd: BuxferQuickClientMobile/BuxferQuickClientMobile
 user/pwd: _smartbuxfer_/_smartbuxfer_
 
 
-INFO:
+*****INFO:
 -CONDIVISIONE DELLO SCOPE FRA CONTROLLER-
 Per rendere accessibile il medesimo scope a controller differenti è necessaria una relazione padre-figlio.
 Così facendo posso definire un controller globale a livello di applicazione nel DOM e inserire come controller
 figli tutti quelli che mi servono specifici per le singole funzioni. In questo modo dai figli avrò accesso alle prorietà definite nello scope padre.
 
+*****QA
+Q: APK name is not the project set in the config.xml
+A: execute "cordova platform rm android" and then "cordova platform add android" and then works perfrectly 
 
-BUILD:
+
+*****ENVIRONMENT SETTINGS
+- install cordova cli
+- install github
+- clone Quixbuxfer_cordova_release project
+- 
+
+*****BUILD:
 - cambiare la release su \www\js\app.js e config.xml
 - 
