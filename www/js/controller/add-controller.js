@@ -62,25 +62,15 @@ buxferModule.controller('AddController',
 			if (day<10){
       			day="0" + day;
 			}
-    		$scope.transdate=year + "-" + month + "-" + day
+    		$scope.transdate=year + "-" + month + "-" + day;
             //execute click to amount to open keyword automatically.
             //in the event listener click will set focus to the amount
-           /* $timeout(function () {
-                
-				//document.getElementById("amount").focus();
-                //cordova.plugins.Keyboard.show();
-                
-				}, 0, false);
-            */
+            $timeout(function () {
+                cordova.plugins.Focus.focus(document.getElementById("amount"));
+            }, 500, false);
             
-            document.addEventListener("deviceready", function () {
-                    //document.getElementById("amount").focus();
-                    //cordova.plugins.Keyboard.show();
-                    cordova.plugins.Focus.focus(document.getElementById("amount"));
-                    /*$timeout(function () {
-				        document.getElementById("amount").focus();    
-				    }, 0, false);*/
-                }, false);
+            
+            
 		};
 		
 		//initialize view-add view
@@ -145,10 +135,17 @@ buxferModule.controller('AddController',
                 alertType: 'success'
             };
 
-            ServiceBuxferUIAlert.showModal({}, modalOptions).then(function (result) {
-                $log.info('close alert');
+            ServiceBuxferUIAlert.showModal({}, modalOptions)
+            
+            .then(function (result) {
+                $log.info('show alert');
                 //reset view-add
-			     $scope.initViewAdd()    
+			     //$scope.initViewAdd()    
+            })
+            
+            .finally(function() {
+                $scope.initViewAdd();
+                $log.info('Modal closed at:' + new Date());
             });
              
 			

@@ -52,6 +52,9 @@ Per rendere accessibile il medesimo scope a controller differenti è necessaria 
 Così facendo posso definire un controller globale a livello di applicazione nel DOM e inserire come controller
 figli tutti quelli che mi servono specifici per le singole funzioni. In questo modo dai figli avrò accesso alle prorietà definite nello scope padre.
 
+-INVOCARE METODI Cordova dopo il deviceready event
+http://stackoverflow.com/questions/21556090/cordova-angularjs-device-ready
+
 *****QA
 Q: APK name is not the project set in the config.xml
 A: execute "cordova platform rm android" and then "cordova platform add android" and then works perfrectly 
