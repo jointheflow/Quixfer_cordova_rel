@@ -64,7 +64,7 @@ A: execute "cordova platform rm android" and then "cordova platform add android"
 - install cordova cli
 - install github
 - clone Quixbuxfer_cordova_release project
-- 
+- sign: see http://vincentpeters.be/signing-a-cordova-android-apk-from-the-command-line/
 
 *****BUILD:
 - cambiare la release su \www\js\app.js e config.xml
