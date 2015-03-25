@@ -25,11 +25,14 @@ V add view: accept only number on amount field
 Cordova dependencies:
 - https://github.com/driftyco/ionic-plugins-keyboard
 - https://github.com/46cl/cordova-android-focus-plugin/
+- http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
 The first manage a ionic keyword, the second make the softkeyboard compliant with the focused input text. (eg. number input text will show only softkeyboard with number)
-
+The third manage hiding splash screen
 ****Install the follwoing plugin:
 - cordova plugin add com.ionic.keyboard
 - cordova plugin add https://github.com/46cl/cordova-android-focus-plugin
+- cordova plugin add org.apache.cordova.splashscreen
+
 Example of use softkeyboard plugin:
  Set the focus to the "amount" field and show numeric softkeyboard
  document.addEventListener("deviceready", function () {
@@ -52,6 +55,9 @@ Per rendere accessibile il medesimo scope a controller differenti è necessaria 
 Così facendo posso definire un controller globale a livello di applicazione nel DOM e inserire come controller
 figli tutti quelli che mi servono specifici per le singole funzioni. In questo modo dai figli avrò accesso alle prorietà definite nello scope padre.
 
+-INVOCARE METODI Cordova dopo il deviceready event
+http://stackoverflow.com/questions/21556090/cordova-angularjs-device-ready
+
 *****QA
 Q: APK name is not the project set in the config.xml
 A: execute "cordova platform rm android" and then "cordova platform add android" and then works perfrectly 
@@ -61,8 +67,8 @@ A: execute "cordova platform rm android" and then "cordova platform add android"
 - install cordova cli
 - install github
 - clone Quixbuxfer_cordova_release project
-- 
+- sign: see http://vincentpeters.be/signing-a-cordova-android-apk-from-the-command-line/
 
 *****BUILD:
 - cambiare la release su \www\js\app.js e config.xml
-- 
+- prepare EULA

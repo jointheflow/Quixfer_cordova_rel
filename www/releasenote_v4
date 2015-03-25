@@ -25,11 +25,14 @@ V add view: accept only number on amount field
 Cordova dependencies:
 - https://github.com/driftyco/ionic-plugins-keyboard
 - https://github.com/46cl/cordova-android-focus-plugin/
+- http://plugins.cordova.io/#/package/org.apache.cordova.splashscreen
 The first manage a ionic keyword, the second make the softkeyboard compliant with the focused input text. (eg. number input text will show only softkeyboard with number)
-
+The third manage hiding splash screen
 ****Install the follwoing plugin:
 - cordova plugin add com.ionic.keyboard
 - cordova plugin add https://github.com/46cl/cordova-android-focus-plugin
+- cordova plugin add org.apache.cordova.splashscreen
+
 Example of use softkeyboard plugin:
  Set the focus to the "amount" field and show numeric softkeyboard
  document.addEventListener("deviceready", function () {
@@ -68,4 +71,4 @@ A: execute "cordova platform rm android" and then "cordova platform add android"
 
 *****BUILD:
 - cambiare la release su \www\js\app.js e config.xml
-- 
+- prepare EULA

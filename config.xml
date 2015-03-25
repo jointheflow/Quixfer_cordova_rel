@@ -10,10 +10,15 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    
     <platform name="android">
-        <icon src="www/img/quixfer.png" width="57" height="57" density="mdpi" />
-        <splash src="www/img/quixfer.png" width="57" height="57" density="mdpi"/>
+        <icon src="www/img/quixfer_mdpi.png" density="mdpi" />
+        <icon src="www/img/quixfer_hdpi.png" density="hdpi" />
+        <icon src="www/img/quixfer_xhdpi.png" density="xhdpi" />
+        <icon src="www/img/quixfer_xxhdpi.png" density="xxhdpi" />
+        <splash src="www/img/quixfer_hdpi_splash.png" density="hdpi"/>
     </platform>
     
     <feature name="Keyboard">

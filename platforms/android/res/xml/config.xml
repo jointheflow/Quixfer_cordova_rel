@@ -9,8 +9,15 @@
         <param name="android-package" value="fr._46cl.focus.Focus" />
         <param name="onload" value="true" />
     </feature>
-    <icon density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
-    <splash density="mdpi" height="57" src="www/img/quixfer.png" width="57" />
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <icon density="mdpi" src="www/img/quixfer_mdpi.png" />
+    <icon density="hdpi" src="www/img/quixfer_hdpi.png" />
+    <icon density="xhdpi" src="www/img/quixfer_xhdpi.png" />
+    <icon density="xxhdpi" src="www/img/quixfer_xxhdpi.png" />
+    <splash density="hdpi" src="www/img/quixfer_hdpi_splash.png" />
     <name>Quixfer</name>
     <description>
         Hybrid App for smart locally money management of Buxfer expenses and incomes 
@@ -21,5 +28,6 @@
     <content src="index.html" />
     <access origin="*" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1000" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="AutoHideSplashScreen" value="false" />
 </widget>

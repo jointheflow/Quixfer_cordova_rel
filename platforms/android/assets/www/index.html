@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html ng-app="buxferModule" ng-controller="GlobalController">
+<!--html ng-app="buxferModule" ng-controller="GlobalController"-->
+<html id="root-elem" ng-controller="GlobalController">
 <head>
     <title>{{applicationName}} ({{applicationVersion}})</title>
     <script type="text/javascript" src="lib/angular/angular.min.js"></script>
@@ -39,6 +40,19 @@
     <!--script src="js/bootstrap.min.js"></script-->
     <script type="text/javascript" src="lib/angular/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
+    
+    <!-- Manually bootstrap angular after deviceready event fired -->
+    <script>
+        document.addEventListener("deviceready", function() {
+        
+            //hide splash screen
+            navigator.splashscreen.hide();
+            // retrieve the DOM element that had the ng-app attribute
+            var domElement = document.getElementById("root-elem");
+            angular.bootstrap(domElement, ["buxferModule"]);
+        }, false);
+    
+    </script>
    
 	
  
